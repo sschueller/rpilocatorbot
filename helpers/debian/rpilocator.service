@@ -1,0 +1,24 @@
+#
+# Debain Systemd Service
+# - Set your username below (User=)
+# - Set the path to index.js
+# - copy this file to /etc/systemd/system/rpilocator.service
+# - start service: systemctl start rpilocator
+# - autostart on boot: systemctl enable rpilocator
+# - logs are written to /var/log/syslog
+#
+[Unit]
+Description=rpilocator
+After=network.target
+StartLimitIntervalSec=10
+[Service]
+WorkingDirectory=/path/to
+Type=simple
+Restart=always
+RestartSec=1
+User=myuser
+ExecStart=/usr/bin/env node /path/to/index.js
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

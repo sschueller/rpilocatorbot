@@ -5,6 +5,7 @@
         {"value": "CM4", "display": "CM4"},
         {"value": "PI3", "display": "PI3"},
         {"value": "PI4", "display": "PI4"},
+        {"value": "PI5", "display": "PI5"},
         {"value": "PIZERO", "display": "PIZERO"},
         {"value": "PIZERO2", "display": "PIZERO2"}
     ],
